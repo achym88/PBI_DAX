@@ -1,0 +1,5 @@
+UserEmailOnlyWithPrefix = 
+VAR CurrentUser = USERNAME()
+VAR EmailPart = IF(CONTAINSSTRING(CurrentUser, "@"), LEFT(CurrentUser, FIND("@", CurrentUser) - 1), CurrentUser)
+RETURN
+"FIO Billing for: " & EmailPart
